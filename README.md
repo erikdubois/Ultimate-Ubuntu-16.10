@@ -5,10 +5,19 @@ We start our journey with a clean install.
 
 Take a look at the various scripts and run the ones you like. Change content if need be.
 
+First screen (few icons deleted already)
+
+![Screenshots](http://i.imgur.com/rQ42XPg.png)
+
 
 Some icons we like ...
 
 Using Sardi icons from  http://sourceforge.net/projects/sardi/
+
+
+UPDATED TILL HERE
+
+
 
 ![Screenshots](http://i.imgur.com/J5OZveg.jpg)
 
