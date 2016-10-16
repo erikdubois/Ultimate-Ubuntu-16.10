@@ -12,14 +12,9 @@
 ##################################################################################################################
 
 
-
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
-
-
+sudo add-apt-repository ppa:otto-kesselgulasch/gimp -y
+sudo apt-get update
+sudo apt install gimp -y
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"

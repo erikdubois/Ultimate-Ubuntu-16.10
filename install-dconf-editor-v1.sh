@@ -13,13 +13,12 @@
 
 
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
+# changing settings of cinnamon that are well hidden
+
+sudo apt-get install dconf-editor dconf-cli -y
 
 
+##################################################################################################################
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"

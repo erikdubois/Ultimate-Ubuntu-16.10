@@ -12,14 +12,18 @@
 ##################################################################################################################
 
 
+# dependancy
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
+wget http://ftp.de.debian.org/debian/pool/main/libg/libgcrypt11/libgcrypt11_1.5.0-5+deb7u4_amd64.deb
+wget https://github.com/adobe/brackets/releases/download/release-1.7/Brackets.Release.1.7.64-bit.deb
 
 
+sudo dpkg -i libgcrypt11_1.5.0-5+deb7u4_amd64.deb
+sudo dpkg -i Brackets.Release.1.7.64-bit.deb
+
+
+rm Brackets.Release.1.7.64-bit.deb
+rm libgcrypt11_1.5.0-5+deb7u4_amd64.deb
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"

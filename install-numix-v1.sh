@@ -13,12 +13,15 @@
 
 
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
+# repo for numix themes
+sudo add-apt-repository ppa:numix/ppa -y
 
+
+# getting new info of this new repo
+sudo apt-get -y update
+
+# installing
+sudo apt-get install -y numix-gtk-theme numix-icon-theme-circle
 
 
 echo "################################################################"

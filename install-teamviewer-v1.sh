@@ -11,13 +11,15 @@
 #
 ##################################################################################################################
 
+# Downloading and installing latest teamviewer
 
+rm /tmp/teamviewer_i386.deb
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
+wget https://download.teamviewer.com/download/teamviewer_i386.deb -O /tmp/teamviewer_i386.deb
+sudo apt install -y libjpeg62:i386
+sudo dpkg -i /tmp/teamviewer_i386.deb
+
+rm /tmp/teamviewer_i386.deb
 
 
 

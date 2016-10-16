@@ -12,13 +12,18 @@
 ##################################################################################################################
 
 
+# repo for grub-customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
 
+# getting new info of this new repo
+sudo apt-get -y update
+
+# installing
+sudo apt-get install -y grub-customizer
+
+
+############################################################################
 
 
 echo "################################################################"

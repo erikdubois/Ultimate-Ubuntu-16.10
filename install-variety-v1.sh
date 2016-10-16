@@ -12,12 +12,10 @@
 ##################################################################################################################
 
 
-
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
+# Downloading and installing latest variety
+sudo add-apt-repository ppa:peterlevi/ppa -y
+sudo apt-get update
+sudo apt-get install variety -y
 
 
 

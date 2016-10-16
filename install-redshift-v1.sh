@@ -12,14 +12,7 @@
 ##################################################################################################################
 
 
-
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
-
-
+sudo apt install -y redshift redshift-gtk geoclue-2.0
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"

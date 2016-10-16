@@ -11,16 +11,18 @@
 #
 ##################################################################################################################
 
+rm /tmp/sublime-text_build-3126_amd64.deb
+
+wget https://download.sublimetext.com/sublime-text_build-3126_amd64.deb -O /tmp/sublime-text_build-3126_amd64.deb
+sudo dpkg -i /tmp/sublime-text_build-3126_amd64.deb
+
+rm /tmp/sublime-text_build-3126_amd64.deb
 
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
-
-
+##################################################################################################################
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
 echo "################################################################"
+
+

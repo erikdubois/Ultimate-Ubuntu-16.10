@@ -13,13 +13,20 @@
 
 
 
-rm -rf /tmp/Surfn
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
-rm -rf /tmp/Surfn
+#https://github.com/mclmza/arc-theme-Red
 
+rm -rf /tmp/arc-theme-Red
 
+sudo apt-get install -y autoconf automake pkg-config libgtk-3-dev git
+
+git clone https://github.com/mclmza/arc-theme-Red --depth 1 /tmp/arc-theme-Red
+cd /tmp/arc-theme-Red
+./autogen.sh --prefix=/usr
+sudo make install
+#sudo make uninstall
+
+# cleanup
+rm -rf /tmp/arc-theme-Red
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"

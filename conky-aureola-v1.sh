@@ -12,16 +12,15 @@
 ##################################################################################################################
 
 
-# if there is already a folder, delete or else do nothing
-
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+########################################
+########        C O N K Y      #########
+########################################
 
 
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
 
+# if there is already a folder in tmp, delete or else do nothing
+[ -d /tmp/aureola ] && rm -rf "/tmp/aureola" || echo ""
+# download the github in folder /tmp/aureola
 
 echo "################################################################"
 echo "Checking if git is installed"
@@ -44,39 +43,20 @@ echo "Install git for an easy installation"
 		  	
 	fi
 
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
+
+
 
 echo "################################################################"
-echo "Checking if curl is installed"
-echo "Install curl for an easy installation"
+echo "Downloading the files from github to tmp directory"
 
+rm -rf /tmp/aureola
 
-	# curl
+git clone https://github.com/erikdubois/Aureola /tmp/.aureola
 
-	# check if curl is installed
-	if which curl > /dev/null; then
-		echo "curl was installed. Proceding..."
+cp -rf /tmp/.aureola ~/
 
-		else
+rm -rf /tmp/aureola
 
-		echo "################################################################"
-		echo "installing curl for this script to work"
-		echo "################################################################"
-
-	  	sudo apt-get install curl -y
-		  	
-	fi
-
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
-
-sudo /tmp/hardcode-fixer/fix.sh
-
-rm -rf /tmp/hardcode-fixer
-
-echo
-echo
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
 echo "################################################################"
