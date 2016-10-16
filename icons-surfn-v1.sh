@@ -1,66 +1,66 @@
-#!/bin/bash 
-############################################################################
+#!/bin/bash
 #
 #                                       
-#                          ./+o+-       
-#                  yyyyy- -yyyyyy+      
-#               ://+//////-yyyyyyo      
-#           .++ .:/++++++/-.+sss/`      
-#         .:++o:  /++++++++/:--:/-      
-#        o:+o+:++.`..```.-/oo+++++/     
-#       .:+o:+o/.          `+sssoo+/    
-#  .++/+:+oo+o:`             /sssooo.   
-# /+++//+:`oo+o               /::--:.   
-# \+/+o+++`o++o               ++////.   
-#  .++.o+++oo+:`             /dddhhh.   
-#       .+.o+oo:.          `oddhhhh+    
-#        \+.++o+o``-````.:ohdhhhhh+     
-#         `:o+++ `ohhhhhhhhyo++os:      
-#           .o:`.syhhhhhhh/.oo++o`      
-#               /osyyyyyyo++ooo+++/     
-#                   ````` +oo+++o\:    
-#                          `oo++.      
-#                                
+# MMMMMMMMMMMMMMMMMMMMMMMMMmds+.        
+# MMm----::-://////////////oymNMd+`     
+# MMd      /++                -sNMd:    
+# MMNso/`  dMM    `.::-. .-::.` .hMN:   
+# ddddMMh  dMM   :hNMNMNhNMNMNh: `NMm   
+#     NMm  dMM  .NMN/-+MMM+-/NMN` dMM   
+#     NMm  dMM  -MMm  `MMM   dMM. dMM   
+#     NMm  dMM  -MMm  `MMM   dMM. dMM   
+#     NMm  dMM  .mmd  `mmm   yMM. dMM   
+#     NMm  dMM`  ..`   ...   ydm. dMM   
+#     hMM- +MMd/-------...-:sdds  dMM   
+#     -NMm- :hNMNNNmdddddddddy/`  dMM   
+#      -dMNs-``-::::-------.``    dMM   
+#       `/dMNmy+/:-------------:/yMMM  
+#          ./ydNMMMMMMMMMMMMMMMMMMMMM  
+#             \.MMMMMMMMMMMMMMMMMMM    
+#                                      
 #
 #
-############################################################################
+##################################################################################################################
+# Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
 # Website 	: 	http://www.erikdubois.be
-############################################################################
+##################################################################################################################
+# 
 # More from Erik Dubois
 #
-# Aurora conky and all its components are installed via an other script
+# Aurora Conky
 # at http://sourceforge.net/projects/auroraconkytheme/
 # Explanation on the use of this theme can be found at 
-# http://erikdubois.be/
+# http://erikdubois.be/category/linux/aurora-conky/
+# 
+# Aureola Conky
+# Collections of nice conky's with lua syntax
+# https://github.com/erikdubois/Aureola
 #
-# Sardi icons can be found at
-# http://sourceforge.net/projects/sardi/
+# Sardi icons
+# Many different styles of icons from colourfull, monochrome, white, circle
+# https://sourceforge.net/projects/sardi/
 #
-# Yltra flat icons can be found at 
-# https://github.com/erikdubois/yltra-flat-icon-theme
-############################################################################
+# Super Ultra Flat Numix Remix
+# Colourfull and playfull icons
+# https://github.com/erikdubois/Surfn
 #
-# the option -y has been added. It will autoinstall all. Omit if you do not want that.
+# Check out the github - many more scripts for automatic installation of Linux Systems.
 #
-############################################################################
-
-
-############################################################################
+#
+##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. AT YOUR OWN RISK.
 #
-############################################################################
+##################################################################################################################
 
-# Y L T R A  F L A T  I C O N S
 
-echo "Installing git"
 
-sudo apt install git
-
-git clone https://github.com/erikdubois/Super-Ultra-Flat-Numix-Remix /tmp/Super-Ultra-Flat-Numix-Remix
-cp -r /tmp/Super-Ultra-Flat-Numix-Remix/* ~/.icons/
-rm -rf /tmp/Super-Ultra-Flat-Numix-Remix
+rm -rf /tmp/Surfn
+git clone https://github.com/erikdubois/Surfn /tmp/Surfn
+find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
+cp -r /tmp/Surfn/* ~/.icons/
+rm -rf /tmp/Surfn
 
 
 
