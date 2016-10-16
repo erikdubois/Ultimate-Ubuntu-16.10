@@ -52,21 +52,29 @@
 #
 ############################################################################
 
-echo "fixing hardcoded icons"
-
-echo "fixing gedit.desktop"
-old="Icon=accessories-text-editor"
-new="Icon=gedit"
-location="/usr/share/applications/gedit.desktop"
-sudo sed -i  "s/$old/$new/g" $location
-echo "done"
-
-echo "fixing org.gnome.gedit.desktop"
-old="Icon=accessories-text-editor"
-new="Icon=gedit"
-location="/usr/share/applications/org.gnome.gedit.desktop"
-sudo sed -i  "s/$old/$new/g" $location
-echo "done"
+########################################
+########        I C O N S      #########
+########################################
 
 
 
+
+# S A R D I
+# from sourceforge 
+
+wget -O /tmp/sardi.tar.gz "https://sourceforge.net/projects/sardi/files/latest/download?source=files"
+mkdir /tmp/sardi
+tar -zxvf /tmp/sardi.tar.gz -C /tmp/sardi
+rm /tmp/sardi.tar.gz
+
+# if there is no hidden folder conky then make one
+[ -d $HOME"/./icons" ] || mkdir -p $HOME"/.icons"
+
+cp -rf /tmp/sardi/* ~/.icons/
+rm -rf /tmp/sardi
+
+
+
+echo "################################################################"
+echo "###################    T H E   E N D      ######################"
+echo "################################################################"
