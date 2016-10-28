@@ -1,4 +1,4 @@
-# Ultimate Ubuntu 16.04
+# Ultimate Ubuntu 16.10
 
 
 We start our journey with a clean install.
